@@ -1,0 +1,8 @@
+# Default owners for all content
+* @design-system-team
+
+# Figma-specific guidance
+figma/ @design-system-team
+
+# Platform-specific docs
+docs/platforms/ @design-system-team
