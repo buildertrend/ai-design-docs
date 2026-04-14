@@ -31,7 +31,7 @@ BDS defines three categories of text style, each with size variants.
 | `distinct-md` | Semibold | Section subheadings, emphasized UI labels. |
 | `distinct-lg` | Semibold | Larger section headings. |
 
-### Heavy — display and headings (Whyte)
+### Heavy — display and headings (GT Walsheim)
 
 | Token | Weight | Use for |
 |---|---|---|
@@ -59,9 +59,8 @@ BDS defines three categories of text style, each with size variants.
 
 | Family | Used for |
 |---|---|
-| Whyte | Display and heading text (`heavy-*` styles) |
+| GT Walsheim | Display and heading text (`heavy-*` styles) |
 | Inter | Body, labels, UI text (`normal-*` and `distinct-*` styles) |
-| Roboto Mono | Code or monospaced text |
 
 ---
 
@@ -70,7 +69,7 @@ BDS defines three categories of text style, each with size variants.
 - Always use a token from the scale — never a raw font size or weight.
 - Form field labels must use `distinct-sm`. Using `normal-sm` or `normal-md` makes labels visually indistinguishable from body copy.
 - Page titles use `heavy-xl`. Section headings use `heavy-lg`. Never skip levels.
-- Heavy styles use Whyte (brand font). Normal and distinct styles use Inter.
+- Heavy styles use GT Walsheim (brand font). Normal and distinct styles use Inter.
 
 ---
 
