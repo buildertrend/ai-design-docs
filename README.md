@@ -1,6 +1,6 @@
 # ai-design-docs
 
-Centralized design intelligence layer for Blueprint Design System. Provides structured, AI-readable guidance for Claude Code and Figma Make, while enabling human collaboration and iteration.
+Portable design intelligence layer for Blueprint Design System. The go-to BDS context for AI-assisted work outside of BTNet — powering Figma Make design generation and Claude Code in any codebase without its own design system docs.
 
 ---
 
