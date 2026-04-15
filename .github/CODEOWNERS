@@ -1,8 +1,8 @@
 # Default owners for all content
-* @design-system-team
+* @buildertrend/design-systems
 
 # Figma-specific guidance
-figma/ @design-system-team
+figma/ @buildertrend/design-systems
 
 # Platform-specific docs
-docs/platforms/ @design-system-team
+docs/platforms/ @buildertrend/design-systems
