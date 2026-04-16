@@ -76,15 +76,50 @@ Use `BuiButton` for all interactive actions.
 
 ## Layout
 
-Use BDS layout components — not custom CSS grids or flexbox.
+### Page shell
 
-| Component | Use for |
+Every page lives in a shell with four regions:
+
+| Region | Value |
 |---|---|
-| `BdsLayout` | Page-level structure. Use `displayType` templates: `"HCF"` (Header/Content/Footer), `"1and1"`, `"1and2"`, `"sidebar"`, etc. |
-| `BdsRow` | Horizontal flex rows within a section. |
-| `BdsCol` | Vertical flex columns within a section. |
-| `BdsSection` | Primary content container on a page. Supports title, status badge, and action slot. |
-| `BdsPanel` | List + detail split views. |
+| Top Navigation | 48px height, fixed |
+| Job Panel | 240px default · 48px collapsed · resizable |
+| Main Content | Fills remaining width |
+| Side Panel | 400px default · resizable · can extend full page |
+
+### Main content regions
+
+| Region | What goes here |
+|---|---|
+| Header | Page title, primary actions, status, breadcrumbs |
+| Content | Forms, tables, lists — main work area |
+| Side Panel | Comments, activity, item details — supplemental, not core |
+
+Side panel: 400px default, resizable, overlays below 768px.
+- **List pages:** item details or feature activity in the side panel
+- **Item pages:** comments, activity log, version history in the side panel
+
+### Breakpoints and padding
+
+No max-width on pages or content areas — everything fills available width.
+
+| Breakpoint | Padding |
+|---|---|
+| Desktop (≥ 992px) | 32px |
+| Tablet (768px – 991px) | 24px |
+| Mobile (< 768px) | 16px |
+
+### Section spacing
+
+Group related content in sections. Default to stacking. Use side-by-side only when it helps the content.
+
+| Breakpoint | Vertical gap | Horizontal gap |
+|---|---|---|
+| Desktop | 32px | 24px |
+| Tablet | 24px | 24px |
+| Mobile | 16px | n/a — sections stack |
+
+Use a divider between side-by-side sections. Side-by-side sections always stack on mobile. Avoid placing fixed-height content beside dynamic-height content when heights will diverge — stack instead.
 
 ---
 
