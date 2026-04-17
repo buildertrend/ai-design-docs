@@ -1,6 +1,6 @@
 # ai-design-docs
 
-Portable design intelligence layer for Blueprint Design System. The go-to BDS context for AI-assisted work outside of BTNet - powering Figma Make design generation and Claude Code in any codebase without its own design system docs.
+Portable Blueprint Design System context for use outside of BTNet, shared Claude design skills, and Figma Make guidelines for AI-assisted design workflows.
 
 ---
 
@@ -18,6 +18,7 @@ ai-design-docs/
 ├── figma/                 # Distilled guidance for Figma Make
 ├── prompts/               # Task-based AI instructions
 ├── examples/              # Good patterns and anti-patterns
+├── skills/                # Claude Code skills for design workflows
 └── .github/               # Contribution governance
 ```
 
@@ -25,11 +26,11 @@ ai-design-docs/
 
 ## Contribution Workflow
 
-1. Identify a gap or improvement
+1. Identify a gap, improvement, or design workflow to automate
 2. Draft collaboratively (e.g., HackMD, Notion)
-3. Convert to structured markdown using the `_template.md` in the relevant `docs/` subfolder
+3. Convert to structured markdown in the relevant folder (`docs/`, `figma/`, `skills/`, etc.)
 4. Submit a PR for review
 5. Merge into the repo
-6. AI tools consume the updated content
+6. AI tools consume updated docs; share new skills with the team to install
 
 All changes go through pull requests. Use `CODEOWNERS` for domain ownership. Draft ideas outside the repo before opening a PR.
