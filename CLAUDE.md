@@ -30,8 +30,9 @@ This repository is the design intelligence layer for Blueprint Design System (BD
 ## Key Files
 
 - `figma/guidelines.md` — Figma Make design rules
-- `docs/systems/` — Design tokens (spacing, color, typography)
+- `docs/systems/` — Design tokens (spacing, color, typography) and utility classes
 - `docs/components/` — Per-component guidance
 - `docs/patterns/` — Multi-component UI patterns (forms, navigation, modals)
 - `docs/principles/` — Foundational design principles
 - `docs/platforms/` — Platform-specific guidance (web, iOS, Android, webview)
+- `docs/hooks/` — BDS React hooks (useStore, etc.)

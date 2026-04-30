@@ -30,7 +30,7 @@ A list page header has up to 5 elements, each on its own line:
 |---|---|---|
 | 1st (rightmost) | Primary action button | One per page. Use a split button if the entity can also be imported or created from a template. |
 | 2nd | Secondary workflow action | Max 2 secondary buttons total in the header. |
-| 3rd | "Actions" overflow menu | Use when there are more than 2 workflow actions. Label: "Actions" + caret icon. |
+| 3rd | "Actions" overflow menu | Secondary dropdown button with downward-facing caret. Use when there are more than 2 workflow actions. Label: "Actions". |
 | Then | Filter | Tertiary icon button. Always visible — never collapses. |
 | Then | Export | Tertiary icon button (if applicable). |
 | Then | Settings | Tertiary icon button (if applicable). |
@@ -59,7 +59,7 @@ Use a split button (not a dropdown primary button) when the entity can be create
 - Grid controls (search bar, Expand/Collapse)
 
 **Scrolls with content:**
-- Data visualization
+- Data visualization — on mobile, truncates to a simplified version showing only the most important value. The specific value shown should be decided by the feature team based on data and subject matter expertise.
 
 ---
 
@@ -75,6 +75,12 @@ The header max-width is 1500px. Below 768px, responsive breakpoints apply:
 | ~326px | Breadcrumb truncates to prevent encroaching on the toolbar |
 
 The Filter button always remains visible at all screen sizes.
+
+---
+
+## Card view — "Select all"
+
+When a grid uses a card view layout, a standalone "Select all" control may appear on its own line below the grid controls. This should remain isolated on its own line — do not merge it with tabs or other controls. Teams should work toward absorbing "Select all" into the grid itself.
 
 ---
 

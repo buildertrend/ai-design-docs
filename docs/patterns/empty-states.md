@@ -39,14 +39,21 @@ Do not include a primary action button in the empty state if one already exists 
 
 ## The 6 empty state types
 
-| Type | When to use |
-|---|---|
-| **Onboarding** | No items have been created yet (e.g., no change orders, no integrations set up) |
-| **Structural** | Required data hasn't been added elsewhere for this area to populate (e.g., no data to generate a report) |
-| **Temporary** | Content is temporarily absent (e.g., all tasks complete, all jobs closed and filtered out) |
-| **Permissions** | The user lacks access to view this data |
-| **Error** | A system failure occurred (e.g., lost connection, page error) |
-| **Search / filter** | A search or filter returned no matching results |
+| Type | When to use | Icon |
+|---|---|---|
+| **Onboarding** | No items have been created yet (e.g., no change orders, no integrations set up) | Feature icon |
+| **Structural** | Required data hasn't been added elsewhere for this area to populate (e.g., no data to generate a report) | Feature icon |
+| **Temporary** | Content is temporarily absent (e.g., all tasks complete, all jobs closed and filtered out) | Feature icon |
+| **Permissions** | The user lacks access to view this data | Warning / exclamation icon |
+| **Error** | A system failure occurred (e.g., lost connection, page error) | Warning / exclamation icon |
+| **Search / filter** | A search or filter returned no matching results | Feature icon or search icon |
+
+### Permissions and error states
+
+These two types differ from onboarding empty states in content requirements:
+- Use a **warning or exclamation icon** — not the feature icon.
+- Messaging must be **actionable**: explain what went wrong or why access is restricted, and tell the user what they can do next.
+- Do not leave the user with no path forward — always provide a next step (e.g., contact an admin, try again, check connection).
 
 ---
 
@@ -55,6 +62,7 @@ Do not include a primary action button in the empty state if one already exists 
 - Center-align the empty state content within the content area.
 - Use the feature's icon, not a generic placeholder icon.
 - Keep the explainer text factual and helpful — not promotional.
+- Use the `EmptyState` component — it handles responsive layout (mobile, tablet, desktop) automatically.
 
 ---
 

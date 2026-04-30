@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.\\(mdx|tsx\\)$\")",
+      "Bash(grep -r \"Pattern\" /Users/alex.roberts/Dev/BTNet/Clients.App/src/stories/*.mdx)"
+    ]
+  }
+}

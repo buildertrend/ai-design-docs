@@ -127,6 +127,7 @@ Use a divider between side-by-side sections. Side-by-side sections always stack 
 
 - Use `BdsBadge` for status labels (success, warning, danger, info). Never use a plain `<span>` or custom chip.
 - Use `BdsPill` for compact, removable, or selectable tags.
+- **Never rely on color alone** to communicate status. Every badge must pair color with an icon, text, or both.
 
 Badge display types: `default` · `info` · `warning` · `danger` · `success`
 
@@ -191,7 +192,7 @@ If the page has both tabs and grid controls, place them on one line: tabs left, 
 **Action toolbar order (right to left):**
 1. Primary action — one per page; use a split button if multiple creation methods exist
 2. Secondary workflow actions — max 2
-3. "Actions" dropdown (labeled, with caret) — when there are more than 2 workflow actions
+3. "Actions" **secondary dropdown button** (labeled, with downward-facing caret) — when there are more than 2 workflow actions
 4. Filter (tertiary icon) — always visible at all screen sizes, never collapses
 5. Export, Settings, History, Help Center (tertiary icons, if applicable)
 
@@ -199,6 +200,8 @@ If the page has both tabs and grid controls, place them on one line: tabs left, 
 - No ellipsis (⋯) overflow on desktop — use the labeled "Actions" dropdown instead.
 - Batch actions go in the Floating Action Bar, not the header.
 - The toolbar should have at least 2 icon buttons — add Help Center or Export if needed.
+- Card-view grids may include a standalone "Select all" control on its own line below the grid controls. Do not merge it with tabs or other controls.
+- Data visualization scrolls with the table content. On mobile, truncate it to the single most important value — determined by the feature team.
 
 ---
 
@@ -284,6 +287,67 @@ Use tabs to switch between different **views of the same data or subject matter*
 - Mode or input method selection (flat fee vs. line items, choose date vs. link to schedule) → use a **segmented control**.
 - Switching between distinct product features → use separate pages and navigation.
 - Sub-navigation inside a tab panel → never stack tabs inside tabs.
+
+---
+
+## Menus
+
+Use `BuiMenu` for all dropdown menus (contextual, overflow, action menus).
+
+**Item ordering (top to bottom):**
+1. Workflow actions (primary tasks — Send, Approve, Recall)
+2. Common actions (Print, Share, Copy, Export)
+3. Destructive actions — always last, always styled red (Delete, Void, Disconnect)
+
+**Hard rules:**
+- Destructive items are always at the bottom and always red.
+- Never place a destructive action in the middle of a menu.
+
+---
+
+## Split View
+
+Use `BTSplitView` for list/detail layouts where selecting an item shows details alongside the list.
+
+**Three modes:**
+- `list` — full-width list, detail hidden
+- `split` — both panels visible with a draggable divider
+- `detail` — full-width detail, list hidden
+
+**Responsive:** Below 768px, split mode collapses to detail-only. Design both panels to be independently usable at narrow widths. Always provide a way to navigate back to the list from the detail panel on mobile.
+
+---
+
+## Activity Log
+
+Activity logs appear in the **side panel**, opened via the history icon in the item header. They are available on item pages only — not list pages.
+
+**Entry anatomy:** Icon · Action description · by [Actor] · on [Date], [Time]
+
+**Expandable details:** Include a "Show changes" / "Show details" toggle on entries where the action saved changes. Keep the top-level description concise — field-level details go inside the expanded section.
+
+**Change formatting (inside expandable section):**
+- Field label — plain text
+- Old value — struck through, red
+- Separator — →
+- New value — standard text
+
+**Standard action icons:**
+
+| Action | Icon |
+|---|---|
+| Created / Added | PlusCircle |
+| Updated | NotePencil |
+| Deleted | XCircle |
+| Approved / Success | CheckCircle |
+| Sent | PaperPlaneRight |
+| Ready for payment | ArrowCircleRight |
+| Paid / Payment recorded | CurrencyCircleDollar |
+
+**Hard rules:**
+- Always show actor name and timestamp — never omit either.
+- Use past-tense verbs only: "Updated," "Created," "Deleted," "Approved."
+- Never show the activity log inline in the page body.
 
 ---
 
