@@ -74,6 +74,26 @@ Use `BuiButton` for all interactive actions.
 
 ---
 
+## Popovers
+
+Use `BTPopover` for supplemental, nice-to-know information on demand. Never for essential information or validation errors.
+
+**Trigger placement:**
+- **Form fields:** info icon beside the label — never make the label itself the trigger.
+- **Column headers:** header text with a dashed underline as the trigger.
+- **Button labels:** wrap an icon-only button in a popover for the hover label.
+
+**Content:**
+- Without a title: 1–2 sentences max.
+- With a title: a short paragraph or a few bullets. If you need more than 3–4 lines, the content belongs inline or in a help article.
+- Never repeat the field name back to the user ("Markup percentage is…" when the field is "Markup %").
+
+**Hard rules:**
+- Maximum 2 popovers per form. If you need more, the UI is unclear — simplify it.
+- Default trigger is `hover`. Use `click` in dense layouts or for interactive content (links, buttons).
+
+---
+
 ## Layout
 
 ### Page shell
