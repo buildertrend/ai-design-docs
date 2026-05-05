@@ -1,0 +1,224 @@
+---
+name: content-101
+description: Apply Buildertrend UX writing standards to UI copy. Use when writing or reviewing button labels, field labels, error messages, empty states, tooltips, confirmation dialogs, or any product UI text.
+argument-hint: "[copy or UI context to review]"
+---
+
+# Content 101
+
+## Top 10 guidelines
+
+Writing for product means conveying important information quickly and clearly. These are tips for good writing in general, and good UX writing in particular.
+
+-   **Use the active voice.** "We couldn't find that search term." Not: "That search term couldn't be found."
+
+-   **Write concisely.** Use fewer, shorter words.
+
+-   **Don't use jargon.** Ask yourself: if my friend read this, would they understand it without me giving them context?
+
+-   **Write out the full word.** Don't use abbreviations, acronyms, or special characters that replace words. (E.g. write "and" instead of using "&").
+
+-   **Be consistent.** Use the same language in your dialog header and in the primary action. Use the same verb across a workflow. (E.g. don't mix and match "link your account," "sync your account," and "add your account").
+
+-   **Check for errors.** It's very easy to miss typos and grammatical mistakes. Have someone check your copy, or run your copy through one of the tools listed here.
+
+-   **Use inclusive language.** Avoid terms like "whitelist," "blacklist," "master," and "disable."
+
+-   **Foreground the most important information.** Numerous studies have shown that people don't read long strings of text when they're using screens. They scan the first 1-3 words and mentally categorize the text. Get to the point.
+
+-   **Use simple language.** Avoiding jargon isn't enough. Use 1-3 syllable words. Assume a Grade 5 reading level or below.
+
+-   **Write like you speak.** If you read it aloud and it sounds convoluted, rewrite it.
+
+## Grammar and punctuation
+
+_(Some of these are specific to BT product writing. They are not necessarily a rule of Standard American English.)_
+
+-   **Don't use exclamation points!**
+    It can be tempting! But the inconsistent tone is simply not worth it!
+
+-   **Don't use emojis.**
+    They tend to be inaccessible, they're easy to misread, and they contribute to inconsistent tone.
+
+-   **Periods (full stops) go inside quotation marks:**
+    _Your Client Update sends every Friday. To change the day, go to "client settings."_
+
+-   **Don't add a period (full stop) to the end of single sentences or short text strings:**
+    _You've turned off location tracking_
+
+-   **If there is exactly one sentence anywhere (banner, modal, helper text, inline text, tooltip, tour step, etc.), do not use a period at the end.**
+
+-   **Use contractions** (e.g. "can't," "don't," "isn't").
+    It's more human and tends to read more fluently.
+
+-   **Use "they" instead of "he or she."**
+    Instead of "user" or "users," say "person," "people," "someone," "anyone"—or use a specific role title, like "client," "sub/vendor."
+
+-   **Use the second person ("you") when referring to the user.**
+    Don't write from the user's perspective. Don't use e.g. _"My receipts," "My settings."_
+
+-   **Use the Oxford comma** before "and" to indicate the last item in a list:
+    _Add, edit, and approve._
+
+-   **Don't use colons in headers or section headers.**
+    You may need to use a colon in a field label, e.g. where introducing a list of item in a radio button group.
+
+## Spelling
+
+Use **Standard American English** spelling. You may need to double-check this, as some products (e.g. Figma) default to British English / Australian spelling.
+
+-   **Color** not _colour_
+-   **Gray** not _grey_
+-   **Center** not _centre_
+-   **Realize** not _realise_
+    _(This rule relates to many words ending in "ize")_
+-   **Behavior** not _behaviour_
+    _(This rule applies to many words featuring "our"/"or," e.g. "favorite")_
+
+## Directional language
+
+The device you're using, and the accessible technologies you're using, change how you interact with the product. For that reason:
+
+-   Instead of writing **"click"** or **"tap,"** use terms like:
+    **"select," "choose," "go to," "head to"**
+
+-   Don't direct users to **"here," "above," "left,"** or **"right."**
+    Instead, be specific: _"Go to folder."_
+
+## Sentence case
+
+-   **Capitalize feature names that appear in the main Buildertrend navigation** (see table below).
+
+-   **Do not capitalize user types** (e.g. client, sub/vendor).
+
+-   **Do not capitalize column headers.**
+
+-   **Some feature names are also common nouns** (e.g. document, file, message). If used in a sentence where they are not referring to the Buildertrend feature, these do not need to be capitalized as proper nouns.
+
+-   **"Terms and Conditions" and "Help Center" should both be capitalized as shown**, as they are proper nouns.
+
+## Toasts (`Ant Message`)
+
+Toasts are low-friction messaging components used to give users immediate feedback on an action. They can be used to indicate success, errors, or non-critical information.
+
+In many instances, it can be useful to include a follow-up action inside a toast. These might include "Undo" to undo the action just taken, or workflow-specific follow-up actions (e.g. if a user has just "Sent" an item, they may want to use the success toast to quickly and easily "Approve" it or "Mark complete").
+
+### Use for
+
+-   Success confirmations ("Invoice sent")
+-   Background process updates ("File uploaded")
+-   Lightweight feedback
+-   Non-critical information
+-   Minor errors ("Upload failed")
+
+### Don't use for
+
+-   Errors requiring action
+-   Information users need to reference later (use a persistent banner)
+-   Critical messages
+
+Toasts should auto-dismiss within 3–5 seconds.
+
+### Content guidelines
+
+**Do:**
+
+-   Write short, direct toasts that follow established patterns
+-   Default to the format "Item" + "verb" (e.g. "Invoice sent")
+-   Include follow-up actions where useful — style these as a link (e.g. "Undo")
+-   Style destructive actions as success toasts if the destructive action was requested by the user (e.g. "Purchase Order deleted" should be a success toast if the user chose to delete the PO)
+
+**Don't:**
+
+-   Surface more than one toast at a time
+-   Include a period at the end of toasts
+-   Include the type of toast in the toast copy (e.g. "Invoice successfully sent," "Deposit send error")
+-   Use toasts for complex or critical errors
+
+## Terms to avoid
+
+Below is a list of terms that people commonly use in tech products and a more friendly and accessible alternative.
+
+{" "}
+
+<table
+    style={{
+        width: "100%",
+        borderCollapse: "collapse",
+        margin: "20px auto",
+        fontFamily: "Arial, sans-serif",
+    }}
+>
+    <thead>
+        <tr>
+            <th>Instead of:</th>
+            <th>Use:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Activate / enable</td>
+            <td>Turn on</td>
+        </tr>
+        <tr>
+            <td>Administer</td>
+            <td>Manage / edit</td>
+        </tr>
+        <tr>
+            <td>Configure</td>
+            <td>Set up / edit</td>
+        </tr>
+        <tr>
+            <td>Deactivate / disable</td>
+            <td>Turn off</td>
+        </tr>
+        <tr>
+            <td>Display</td>
+            <td>Show</td>
+        </tr>
+        <tr>
+            <td>Input</td>
+            <td>Enter</td>
+        </tr>
+        <tr>
+            <td>Modify</td>
+            <td>Edit</td>
+        </tr>
+        <tr>
+            <td>Notify</td>
+            <td>Let you know</td>
+        </tr>
+        <tr>
+            <td>Optimize</td>
+            <td>Make it better / improve</td>
+        </tr>
+        <tr>
+            <td>Provide</td>
+            <td>Give / include / show</td>
+        </tr>
+        <tr>
+            <td>Purchase</td>
+            <td>Buy / pay</td>
+        </tr>
+        <tr>
+            <td>Receive</td>
+            <td>Get</td>
+        </tr>
+        <tr>
+            <td>Remain</td>
+            <td>Stay</td>
+        </tr>
+        <tr>
+            <td>Retain</td>
+            <td>Keep</td>
+        </tr>
+        <tr>
+            <td>Submit</td>
+            <td>Send</td>
+        </tr>
+        <tr>
+            <td>Utilize</td>
+            <td>Use</td>
+        </tr>
+    </tbody>
+</table>
