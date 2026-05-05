@@ -5,11 +5,8 @@ A Claude Code skill that generates a Figma component from a React Native source 
 ## Prerequisites
 
 - Claude Code installed
-- Figma Console MCP installed and running
-- Confluence MCP installed and running
-- Both Figma files open before invoking the skill:
-  - **Blueprint Base**
-  - **Mobile Design System (React Native)**
+- First-party Figma MCP connected
+- Atlassian Rovo MCP connected (for Confluence)
 
 ## Installation
 
@@ -19,21 +16,20 @@ Open Terminal, navigate to `ai-design-docs`, then run:
 cp -r skills/rn-to-figma ~/.claude/skills/
 ```
 
-This will place the skill in your local Claude folder. Restart Claude Code - new skills require a restart for recognition.
+This will place the skill in your local Claude folder. Restart Claude Code — new skills require a restart for recognition.
 
 ## Usage
 
-Type `/rn-to-figma` followed by the component name:
+Type `/rn-to-figma` followed by the component name and optional Figma URL and BTMobile repo path:
 
 ```
-/rn-to-figma Button
 /rn-to-figma BTBanner
-/rn-to-figma BTSegmentedControl
+/rn-to-figma BTBanner https://www.figma.com/design/... /Users/you/Dev/BTMobile
 ```
 
-The skill will ask you to confirm your BTMobile repo path and verify both Figma files are open before proceeding.
+The skill will prompt for any missing inputs before proceeding.
 
 ## What it produces
 
 - A Figma component set in **Mobile Design System (React Native)** covering all component variants
-- A gap audit page published to Confluence under `Product Design > Native Mobile > RN component audit`
+- A gap audit page published to Confluence under `UX > RN component audit`
