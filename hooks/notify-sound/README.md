@@ -13,6 +13,8 @@ Hooks fire on two events:
 
 ## Install
 
+Installs globally to `~/.claude/settings.json` — applies to all projects on your machine.
+
 ```bash
 bash install.sh
 ```
