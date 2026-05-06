@@ -1,0 +1,22 @@
+{
+  "Stop": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "afplay /System/Library/Sounds/Blow.aiff"
+        }
+      ]
+    }
+  ],
+  "PermissionRequest": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "afplay /System/Library/Sounds/Blow.aiff"
+        }
+      ]
+    }
+  ]
+}
